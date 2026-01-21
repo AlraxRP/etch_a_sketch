@@ -7,4 +7,8 @@ for(let i = 0; i<320; i++)
     square.classList.add("square");
 
     container.appendChild(square);
+
+    square.addEventListener("mouseenter", () => {
+        square.style.backgroundColor = "red";
+    });
 };
