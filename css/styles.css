@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+#btnChangeSize
+{
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
 #container
 {
     display: flex;
