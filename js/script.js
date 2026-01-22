@@ -9,7 +9,29 @@ function createGrid(SquarePerSide)
         container.appendChild(square);
 
         square.addEventListener("mouseenter", () => {
-                square.style.backgroundColor = "red";
+
+            const currentColor = window.getComputedStyle(square).backgroundColor;
+            
+            if(currentColor === "rgba(0, 0, 0, 0)")
+            {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+
+                square.style.backgroundColor = `rgb(${r},${g},${b})`;
+                square.style.opacity = "10%";
+            }
+            else
+            {
+                const strCurrentOpacity = window.getComputedStyle(square).opacity;
+                const currentOpacity = parseFloat(strCurrentOpacity);
+                if(currentOpacity < 1)
+                {
+                    const newOpacity = (currentOpacity + 0.1).toFixed(1);
+                    square.style.opacity = `${newOpacity}`;
+                    console.log(newOpacity);
+                }
+            }
         });
     }
 }
