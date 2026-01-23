@@ -45,7 +45,7 @@ btnChangeSize.addEventListener("click", () => {
 
     let newSize = prompt("Enter new grid size:",16);
 
-    if(newSize <= 100)
+    if(newSize <= 100 & newSize > 1)
     {
         while(container.firstChild)
         {
@@ -61,7 +61,7 @@ btnChangeSize.addEventListener("click", () => {
     }
     else
     {
-        alert("Size to big, the grid can be only 100 squares or less per side");
+        alert("Invalid size, the grid can be only between 2 and 100 squares per side");
     }
 
 });

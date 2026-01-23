@@ -17,6 +17,9 @@
     display: flex;
     flex-flow: row wrap;
     border: solid 2px black;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
 }
 
 
@@ -25,5 +28,4 @@
     flex-basis: calc(100% / 16);
     box-sizing: border-box;
     border: solid 1px black;
-    padding: 10px;
 }
